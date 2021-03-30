@@ -1,0 +1,15 @@
+.root {
+    color: blue;
+}
+
+.fl-center{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.other {
+    background-color: rgb(160, 148, 236);
+    composes: fl-center;
+    composes: colors import from "../Logo/Logo.module.css"
+}
