@@ -4,12 +4,21 @@
 
 .fl-center{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
 .other {
-    background-color: rgb(160, 148, 236);
-    composes: fl-center;
-    composes: colors import from "../Logo/Logo.module.css"
+    background-color: rgb(90, 81, 151);
+    /* composes: fl-center; */
+    composes: colors from "../Logo/Logo.module.css"
+}
+
+.root > :global(.something){
+    font-size: 20px;
+    color: rgb(19, 187, 3);
+}
+.root > :global(.anything){
+    font-size: 18px;
+    color: rgb(253, 68, 0);
 }
