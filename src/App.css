@@ -36,3 +36,71 @@
     transform: rotate(360deg);
   }
 }
+
+.classSlider {
+  margin: 50px auto;
+  width: 50%;
+  position: relative;
+}
+
+.sliderDots{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100px;
+}
+
+.sliderDots::before{
+  content: "";
+  width: 25px;
+  height: 1px;
+  background-color: #000000;
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 58px;
+}
+.sliderDots::after{
+  content: "";
+  width: 25px;
+  height: 1px;
+  background-color: #000000;
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 58px;
+}
+
+.sliderDots > button{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+.sliderDots > button::after {
+  content: "";
+  border: 1px solid #000000;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.sliderDots > button:disabled  {
+  border: 1px solid #000000;
+}
+
+.sliderDots > button:disabled::after {
+  background-color: #000000;
+}
