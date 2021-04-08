@@ -5,6 +5,7 @@ import { useWindowWidth } from "../src/helpers/getWindowWidth"
 import './App.css';
 import { ApolloProvider } from "@apollo/client";
 import Data from "./Components/GetData/getData";
+import Image from "./Components/Image";
 import {client} from "./graphQL/queries"
 
 
@@ -29,12 +30,12 @@ function App() {
   return (
     <div className="App">
       <WidthContext.Provider value={width}>
+        <ApolloProvider client={client}>
         <Header />
         <div className="classSlider">
           <Slider className={"sliderDots"} />
         </div>
-        <ApolloProvider client={client}>
-          <Data />
+        <Image />
         </ApolloProvider>
       </WidthContext.Provider>
     </div>
